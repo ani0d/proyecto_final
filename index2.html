@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cine Estrella</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    /* Esto solo oculta el detalle inicialmente */
+    .movie-detail {
+      display: none;
+    }
+
+    .close-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 8px 15px;
+      background-color: #c00;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+    .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+    position: relative;
+    }
+
+    .modal-content iframe {
+      width: 100%;
+      height: 315px;
+      margin-bottom: 15px;
+    }
+
+    .modal-content .showtimes button {
+      margin: 5px;
+      padding: 8px 12px;
+      background-color: #222;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #c00;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="#" class="logo"><i class="fas fa-film"></i> Cine Estrella</a>
+      <nav>
+        <a href="#">Inicio</a>
+        <a href="#cartelera">Cartelera</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Bienvenido a Cine Estrella</h1>
+      <p>Tu destino favorito para ver las mejores películas</p>
+      <a href="#cartelera" class="btn">Ver Cartelera</a>
+    </div>
+  </section>
+
+  <section id="cartelera">
+    <h2 class="section-title">Cartelera</h2>
+    <div class="movies-grid">
+      <div class="movie-card">
+        <div class="movie-poster">
+          <img src="imagen/tron.jpg" alt="Película 1" id="tron-img" style="cursor:pointer;" />
+        </div>
+        <div class="peli-datos">
+          <h3>Tierras Perdidas</h3>
+          <div class="movie-meta">
+            <span>Acción</span>
+            <span>2025</span>
+          </div>
+          <div class="genre">Ciencia Ficción</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detalle de película directamente incluido en index.html -->
+  <!-- Modal de detalles de película -->
+<div id="movieModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="cerrarModal()">&times;</span>
+    <h1 class="movie-title">Tron</h1>
+    <iframe src="https://www.youtube.com/embed/9KVG_X_7Naw" allowfullscreen></iframe>
+    <p>
+      Sumérgete en el mundo prehistórico de "Tierras Perdidas", donde los dinosaurios vuelven a la vida y la aventura está asegurada...
+    </p>
+    <div class="showtimes">
+      <h3>Horarios</h3>
+      <button>10:00</button>
+      <button>13:00</button>
+      <button>16:00</button>
+      <button>19:00</button>
+    </div>
+  </div>
+</div>
+
+
+  <section id="contacto">
+    <h2 class="section-title">Contacto</h2>
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Contáctanos</h3>
+        <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Calle Ficticia 123, Ciudad</div>
+        <div class="contact-item"><i class="fas fa-envelope"></i> contacto@cineestrella.com</div>
+        <div class="contact-item"><i class="fas fa-phone"></i> +34 123 456 789</div>
+      </div>
+      <div class="contact-form">
+        <form>
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Correo</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+          </div>
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Sobre Nosotros</h3>
+        <p>
+          En Cine Estrella nos apasiona el cine. Ofrecemos una selección cuidadosamente curada para todos los gustos.
+        </p>
+      </div>
+      <div class="footer-column">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#cartelera">Cartelera</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Síguenos</h3>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2025 Cine Estrella. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <script>
+  const modal = document.getElementById('movieModal');
+
+  document.getElementById('tron-img').addEventListener('click', function () {
+    modal.style.display = 'block';
+  });
+
+  function cerrarModal() {
+    modal.style.display = 'none';
+  }
+
+  // Cerrar modal al hacer clic fuera del contenido
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      cerrarModal();
+    }
+  };
+</script>
+
+</body>
+</html>
