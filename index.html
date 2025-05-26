@@ -6,7 +6,6 @@
   <title>Cine Estrella - Tu portal cinematográfico</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -32,93 +31,12 @@
     <a href="#coleccion" class="btn">Ver Colección</a>
   </div>
 </section>
-<!--viaje-->
+
 <section id="coleccion">
   <h2 class="section-title">Nuestra Colección</h2>
-  <div class="movies-grid">
-    <div class="movie-card">
-      <div class="movie-poster">
-        <img src="imagen/viaje.jpg" alt="El Viaje">
-      </div>
-      <div class="peli-datos">
-        <h3>El Viaje</h3>
-        <div class="movie-meta">
-          <span>114 min</span>
-        </div>
-        <span class="genre">Drama</span>
-      </div>
-    </div>
-    
-    <!--aventura-->
-    <div class="movie-card">
-      <div class="movie-poster">
-        <img src="imagen/aventura.jpg" alt="Aventura en la Isla">
-      </div>
-      <div class="peli-datos">
-        <h3>Aventura en la Isla</h3>
-        <div class="movie-meta">
-          <span>104 min</span>
-        </div>
-        <span class="genre">Aventura</span>
-      </div>
-    </div>
 
-    <!--titanic-->
-    <div class="movie-card">
-      <div class="movie-poster">
-        <img src="imagen/titanic.jpeg" alt="Titanic">
-      </div>
-      <div class="peli-datos">
-        <h3>Titanic</h3>
-        <div class="movie-meta">
-          <span>150 min</span>
-        </div>
-        <span class="genre">Romance, Drama</span>
-      </div>
-    </div>
-    
-    <!--parasitos-->
-    <div class="movie-card">
-      <div class="movie-poster">
-        <img src="imagen/Parasitos.jpg" alt="Parasitos">
-      </div>
-      <div class="peli-datos">
-        <h3>Parásitos</h3>
-        <div class="movie-meta">
-          <span>132 min</span>
-        </div>
-        <span class="genre">Drama, Comedia, Thriller</span>
-      </div>
-    </div>
-    
-    <!--it-->
-    <div class="movie-card">
-      <div class="movie-poster">
-        <img src="imagen/it.jpeg" alt="It">
-      </div>
-      <div class="peli-datos">
-        <h3>It</h3>
-        <div class="movie-meta">
-          <span>135 min</span>
-        </div>
-        <span class="genre">Terror, Sobrenatural</span>
-      </div>
-    </div>
-
-    <!--tron-->
-    <div class="movie-card">
-      <div class="movie-poster">
-        <img src="imagen/tron.jpg" alt="Tron">
-      </div>
-      <div class="peli-datos">
-        <h3>Tron: Legacy</h3>
-        <div class="movie-meta">
-          <span>125 min</span>
-        </div>
-        <span class="genre">Ciencia ficción, Acción</span>
-      </div>
-    </div>
-  </div>
+  <!-- Contenedor dinámico de películas -->
+  <div id="contenedor" class="movies-grid"></div>
 </section>
 
 <section id="contacto">
@@ -184,7 +102,6 @@
         <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
         <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        
       </div>
     </div>
   </div>
@@ -192,6 +109,10 @@
     &copy; 2025 Cine Estrella. Todos los derechos reservados.
   </div>
 </footer>
+
+<!-- 👇 Scripts van al final del body y en orden -->
+<script src="coleccion.js"></script>
+<script src="testimonios.js"></script>
 
 </body>
 </html>
